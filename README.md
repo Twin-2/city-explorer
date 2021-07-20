@@ -15,12 +15,11 @@ To use on your own machine:
 5. run 'npm run start' to start using on your local port 3000!
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This was built with React and used Boostrap for styling. 
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+07-19-2021 6:00pm - Application is fully functioning with a map and map coordinates
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Thak you to Code Fellow TA Kristian for helping me work through some bugs!
