@@ -24,6 +24,10 @@ This was built with React and used Boostrap for styling.
 ## Credit and Collaborations
 Thak you to Code Fellow TA Kristian for helping me work through some bugs!
 
+
+## Homework Assignment details:
+Picture of [pair programming](https://drive.google.com/file/d/1WouGeYT0Hv5FAD1bT9cQgoW3Sgk6TiFq/view?usp=sharing) work
+
 Name of feature: Set up React
 
 Estimate of time needed to complete: 1 hour
