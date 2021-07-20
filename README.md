@@ -23,3 +23,46 @@ This was built with React and used Boostrap for styling.
 
 ## Credit and Collaborations
 Thak you to Code Fellow TA Kristian for helping me work through some bugs!
+
+Name of feature: Set up React
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 2:30pm
+
+Finish time: 3:30pm
+
+Actual time needed to complete: 1 hour
+
+
+Name of feature: Locations
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 3:30pm
+
+Finish time: 4pm
+
+Actual time needed to complete: 30 minutes
+
+
+Name of feature: Map
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 4pm
+
+Finish time: 5pm
+
+Actual time needed to complete: 1 hour
+
+
+Name of feature: Erros
+
+Estimate of time needed to complete: 30 minutes
+
+Start time: 5pm
+
+Finish time: 5:30pm
+
+Actual time needed to complete: 30 minutes
