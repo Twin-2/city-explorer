@@ -20,6 +20,7 @@ This was built with React and used Boostrap for styling.
 ## Change Log
 07-19-2021 6:00pm - Application is fully functioning with a map and map coordinates
 
+07-20-2021 8:00pm - Added a search for weather information in select cities. See if you can find all 3!
 
 ## Credit and Collaborations
 Thak you to Code Fellow TA Kristian for helping me work through some bugs!
