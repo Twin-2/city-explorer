@@ -25,15 +25,15 @@ class App extends React.Component{
     getLocation = async (e) => {
       e.preventDefault();
       try{
-        const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
+        const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.LOCATIONIQ_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
         const response = await axios.get(API);
         this.setState({ locationData: response.data[0]})
         
-        const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_ACCESS_KEY}&center=${this.state.locationData.lat},${this.state.locationData.lon}&zoom=12`;
+        const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.LOCATIONIQ_ACCESS_KEY}&center=${this.state.locationData.lat},${this.state.locationData.lon}&zoom=12`;
         const mapResponse = await axios.get(MAP);
         this.setState({ map: mapResponse.config.url, showAlert: false})
 
-        const query = `http://localhost:3333/weather?searchQuery=${this.state.formInput}`;
+        const query = `https://city-explorer-api-dw.herokuapp.com/weather?searchQuery=${this.state.formInput}`;
         const weatherResponse = await axios.get(query)
         this.setState({forecastData: weatherResponse.data})
       }
