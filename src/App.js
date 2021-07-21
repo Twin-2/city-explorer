@@ -25,11 +25,11 @@ class App extends React.Component{
     getLocation = async (e) => {
       e.preventDefault();
       try{
-        const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.LOCATIONIQ_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
+        const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
         const response = await axios.get(API);
         this.setState({ locationData: response.data[0]})
         
-        const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.LOCATIONIQ_ACCESS_KEY}&center=${this.state.locationData.lat},${this.state.locationData.lon}&zoom=12`;
+        const MAP = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_KEY}&center=${this.state.locationData.lat},${this.state.locationData.lon}&zoom=12`;
         const mapResponse = await axios.get(MAP);
         this.setState({ map: mapResponse.config.url, showAlert: false})
 
