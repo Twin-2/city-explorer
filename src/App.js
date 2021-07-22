@@ -69,14 +69,14 @@ class App extends React.Component{
         <Button varient="primary" onClick={this.getLocation}>Explore!</Button>
         </div>
 
-        <div id='flexContainer'>
-          <div id='flexItem1'>
+        <div id='flexContainerMainContent'>
+          <div id='flexItemLocationInfo'>
             <h1>{this.state.locationData.display_name}</h1>
             <p>Latitude: {this.state.locationData.lat}</p>
             <p>Longitude: {this.state.locationData.lon}</p>
             <Image id='mapImage' src={this.state.map} rounded/>
           </div>
-          <div id='flexItem2'>
+          <div id='flexItemWeatherInfo'>
             {this.state.forecastData.length > 0 && <Weather forecast={this.state.forecastData}/>}
           </div>
         </div>

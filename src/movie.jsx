@@ -4,10 +4,10 @@ import { Card } from 'react-bootstrap'
 class Movie extends React.Component {
     render() {
         return (
-            <div>
+            <div id='flexContainerMovies'>
                 {this.props.movies.map((value, idx) =>
-                    <Card key={idx} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={value.imageUrl} />
+                    <Card bg='light' border='dark' id='flexItemMovies' key={idx} style={{ width: '23rem' }}>
+                        <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w185${value.imageUrl}?key=${process.env.REACT_APP_MOVIE_API_KEY}`} />
                         <Card.Body>
                             <Card.Title>{value.title}</Card.Title>
                             <Card.Text>
