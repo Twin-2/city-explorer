@@ -14,6 +14,7 @@ To use on your own machine:
 4. Make a e.env file to store this unique key in using the appropriate React naming conventions.
 5. run 'npm run start' to start using on your local port 3000!
 
+
 ## Architecture
 This was built with React and used Boostrap for styling. 
 
@@ -21,6 +22,8 @@ This was built with React and used Boostrap for styling.
 07-19-2021 6:00pm - Application is fully functioning with a map and map coordinates
 
 07-20-2021 8:00pm - Added a search for weather information in select cities. See if you can find all 3!
+
+7-22-2021 2:00pm - Added dynamic weather searching for any location. Added a list of movies based on your search.
 
 ## Credit and Collaborations
 Thak you to Code Fellow TA Kristian for helping me work through some bugs!

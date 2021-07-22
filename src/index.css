@@ -34,11 +34,22 @@ code {
 #exploreHeader{
   text-align: center;
 }
-#flexContainer{
+#flexContainerMainContent{
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-#flexItem2{
+#flexItemWeatherInfo{
   align-self: center;
+}
+
+#flexContainerMovies{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+#flexItemMovies{
+
 }
