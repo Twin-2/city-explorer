@@ -49,7 +49,7 @@ class App extends React.Component{
         this.setState({movies: getMovies.data})
       }
       catch(error){
-        this.setState({errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: []})
+        this.setState({errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: []})
       }
     }
 
