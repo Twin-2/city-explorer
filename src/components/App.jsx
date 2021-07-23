@@ -3,7 +3,8 @@ import React from 'react';
 import { Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Weather from './Weather.jsx';
-import Movie from './movie';
+import Movie from './movie.jsx';
+import LocationInfo from './LocationInfo.jsx'
 
 class App extends React.Component {
   constructor(props) {
