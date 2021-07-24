@@ -40,13 +40,13 @@ class App extends React.Component {
   //https://city-explorer-api-dw.herokuapp.com
   //http://localhost:3333
   getWeather = async () => {
-    const query = `https://city-explorer-api-dw.herokuapp.com/weather?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}`;
+    const query = `http://localhost:3333/weather?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}&searchQuery=${this.state.formInput}`;
     const weatherResponse = await axios.get(query)
     this.setState({ forecastData: weatherResponse.data })
   }
 
   getMovies = async () => {
-    const movieQuery = `https://city-explorer-api-dw.herokuapp.com/movies?searchQuery=${this.state.formInput}`
+    const movieQuery = `http://localhost:3333/movies?searchQuery=${this.state.formInput}`
     const getMovies = await axios.get(movieQuery)
     console.log(getMovies.data)
     this.setState({ movies: getMovies.data })
@@ -73,6 +73,8 @@ class App extends React.Component {
   render() {
     return (
       <div id="contentBody">
+
+        {/* make a new component here  */}
         <Alert
           show={this.state.showAlert}
           variant='warning'>
