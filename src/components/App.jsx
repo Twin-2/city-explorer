@@ -40,13 +40,13 @@ class App extends React.Component {
   //https://city-explorer-api-dw.herokuapp.com
   //http://localhost:3333
   getWeather = async () => {
-    const query = `//https://city-explorer-api-dw.herokuapp.com/weather?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}&searchQuery=${this.state.formInput}`;
+    const query = `https://city-explorer-api-dw.herokuapp.com/weather?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}&searchQuery=${this.state.formInput}`;
     const weatherResponse = await axios.get(query)
     this.setState({ forecastData: weatherResponse.data })
   }
 
   getMovies = async () => {
-    const movieQuery = `//https://city-explorer-api-dw.herokuapp.com/movies?searchQuery=${this.state.formInput}`
+    const movieQuery = `https://city-explorer-api-dw.herokuapp.com/movies?searchQuery=${this.state.formInput}`
     const getMovies = await axios.get(movieQuery)
     console.log(getMovies.data)
     this.setState({ movies: getMovies.data })
