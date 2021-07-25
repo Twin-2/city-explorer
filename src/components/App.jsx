@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React from 'react';
-import { Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Weather from './Weather.jsx';
 import Movie from './movie.jsx';
