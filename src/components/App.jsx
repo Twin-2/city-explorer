@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Weather from './Weather.jsx';
 import Movie from './movie.jsx';
 import LocationInfo from './LocationInfo.jsx'
+import Form from './Form.jsx'
+import AlertComponent from './Alert.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -54,19 +56,19 @@ class App extends React.Component {
 
   getLocation = async (e) => {
     e.preventDefault();
-    try {
-      this.getLocationInfo()
-        .then(() => {
-          this.getMap();
-          this.getWeather();
-          this.getMovies();
-        })
-    }
-    catch (error) {
-      this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] })
-    }
+    this.getLocationInfo()
+      .then(() => {
+        this.getMap();
+        this.getWeather();
+        this.getMovies();
+      })
+      .catch(error => this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] }))
+
   }
 
+  hideAlert = () => {
+    this.setState({ showAlert: false })
+  }
 
 
 
@@ -74,17 +76,10 @@ class App extends React.Component {
     return (
       <div id="contentBody">
 
-        {/* make a new component here  */}
-        <Alert
-          show={this.state.showAlert}
-          variant='warning'>
-          Error code {this.state.errors}: unable to geocode
-          <Button variant="warning" onClick={() => this.setState({ showAlert: false })}>Close</Button>
-        </Alert>
+        <AlertComponent show={this.state.showAlert} errors={this.state.errors} hideAlert={this.hideAlert} />
 
         <div id='exploreHeader'>
-          <input type="text" onChange={this.handleInput} placeholder='Enter City Name Here'></input>
-          <Button varient="primary" onClick={this.getLocation}>Explore!</Button>
+          <Form handleInput={this.handleInput} getLocation={this.getLocation} />
         </div>
 
         <div id='flexContainerMainContent'>
