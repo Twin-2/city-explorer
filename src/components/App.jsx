@@ -30,7 +30,8 @@ class App extends React.Component {
   getLocationInfo = async () => {
     const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
     const response = await axios.get(API);
-    this.setState({ locationData: response.data[0] })
+    console.log(response)
+    this.setState({ locationData: response })
   }
 
   getMap = async () => {
@@ -62,7 +63,7 @@ class App extends React.Component {
         this.getWeather();
         this.getMovies();
       })
-      .catch(error => this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] }))
+    // .catch(error => this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] }))
 
   }
 
