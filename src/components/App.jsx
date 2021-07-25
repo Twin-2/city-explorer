@@ -31,7 +31,7 @@ class App extends React.Component {
     const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_KEY}&q=${this.state.formInput}&format=json`;
     const response = await axios.get(API);
     console.log(response)
-    this.setState({ locationData: response })
+    this.setState({ locationData: response.data[0] })
   }
 
   getMap = async () => {
@@ -45,6 +45,7 @@ class App extends React.Component {
   getWeather = async () => {
     const query = `https://city-explorer-api-dw.herokuapp.com/weather?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}&searchQuery=${this.state.formInput}`;
     const weatherResponse = await axios.get(query)
+    console.log(weatherResponse.data)
     this.setState({ forecastData: weatherResponse.data })
   }
 
@@ -63,7 +64,7 @@ class App extends React.Component {
         this.getWeather();
         this.getMovies();
       })
-    // .catch(error => this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] }))
+      .catch(error => this.setState({ errors: error.response.status, showAlert: true, map: '', locationData: {}, forecastData: [], movies: [] }))
 
   }
 
