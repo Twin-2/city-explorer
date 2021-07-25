@@ -50,6 +50,9 @@ code {
 
 }
 
-#flexItemMovies{
-
+#welcomeHeader{
+  color:#E59CF7;
+  background-color: #4138E0;
+  display: flex;
+  justify-content: center;
 }
