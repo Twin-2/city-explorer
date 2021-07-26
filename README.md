@@ -25,6 +25,8 @@ This was built with React and used Boostrap for styling.
 
 7-22-2021 2:00pm - Added dynamic weather searching for any location. Added a list of movies based on your search.
 
+7-25-2021 6:00pm - Cleaned up the code with more components to handle specific details. Added more cosmetic touch ups for a better look.
+
 ## Credit and Collaborations
 Thak you to Code Fellow TA Kristian for helping me work through some bugs!
 
