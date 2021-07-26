@@ -1,7 +1,7 @@
 # City-Explorer
 
 **Author**: David Whitmore
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.4 
 
 ## Overview
 This application allowsy you to see location info for the city of your choice
