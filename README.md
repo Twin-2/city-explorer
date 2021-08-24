@@ -4,7 +4,7 @@
 **Version**: 1.0.4 
 
 ## Overview
-This application allowsy you to see location info for the city of your choice. Deployed on [Netlify](https://gracious-elion-ed4167.netlify.app/) 
+This application allowsy you to see location info for the city of your choice. Deployed on [Netlify](https://gracious-elion-ed4167.netlify.app/). Backend code on [this](https://github.com/Twin-2/city-explorer-api) GitHub repo.
 
 ## Getting Started
 To use on your own machine:
