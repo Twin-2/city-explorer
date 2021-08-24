@@ -4,7 +4,7 @@
 **Version**: 1.0.4 
 
 ## Overview
-This application allowsy you to see location info for the city of your choice
+This application allowsy you to see location info for the city of your choice. Deployed on [Netlify](https://gracious-elion-ed4167.netlify.app/) 
 
 ## Getting Started
 To use on your own machine:
